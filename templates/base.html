@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f1419">
+  {% block meta %}
+  <title>{% block title %}Free Temp Mail – Disposable Email @{{ domain }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}Create a free temporary email address on {{ domain }}. No registration, instant inbox, protect your privacy from spam and tracking.{% endblock %}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://{{ domain }}{% block canonical %}{% endblock %}">
+  {% endblock %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GGNoob Temp Mail">
+  <meta property="og:title" content="{% block og_title %}Free Temp Mail – {{ domain }}{% endblock %}">
+  <meta property="og:description" content="{% block og_desc %}Free disposable email addresses. Instant inbox, no signup required.{% endblock %}">
+  <meta property="og:url" content="https://{{ domain }}{% block og_url %}{% endblock %}">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% block head %}{% endblock %}
+  <!-- Google AdSense: replace with your real client ID after approval -->
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5246708787988002"
+       crossorigin="anonymous"></script>
+  
+</head>
+<body data-page="{% block page %}{% endblock %}">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="GGNoob Temp Mail home">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        GGNoob <span>Mail</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/faq">FAQ</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <strong>GGNoob Temp Mail</strong>
+          <p style="color:var(--text-muted);font-size:0.9rem;margin-top:0.35rem;max-width:280px">
+            Free disposable email on @{{ domain }}. Protect your real inbox from spam.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="/faq">FAQ</a>
+          <a href="/about">About</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/contact">Contact</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; {{ year }} GGNoob.space — Free temporary email service. Not affiliated with any third-party sites.</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

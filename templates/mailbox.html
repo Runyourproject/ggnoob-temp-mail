@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block page %}mailbox{% endblock %}
+{% block title %}Inbox – {{ email }} | GGNoob Temp Mail{% endblock %}
+{% block description %}Live inbox for {{ email }}. Read incoming messages and verification codes instantly. Free temporary email on {{ domain }}.{% endblock %}
+{% block canonical %}/mailbox/{{ name }}{% endblock %}
+{% block og_url %}/mailbox/{{ name }}{% endblock %}
+{% block robots %}noindex, follow{% endblock %}
+
+{% block meta %}
+  {{ super() }}
+  <meta name="robots" content="noindex, follow">
+{% endblock %}
+
+{% block content %}
+<section class="hero" style="margin-bottom:1.25rem">
+  <h1 style="font-size:1.4rem">Your temporary inbox</h1>
+</section>
+
+<div class="card">
+  <div class="email-box">
+    <div class="email-display" id="email-address" data-email="{{ email }}">{{ email }}</div>
+    <button type="button" class="btn btn-primary" id="btn-copy">Copy</button>
+    <button type="button" class="btn btn-secondary" id="btn-change">Change</button>
+    <button type="button" class="btn btn-secondary" id="btn-refresh">Refresh</button>
+  </div>
+</div>
+
+<!-- Ad slot -->
+<div class="ad-slot leaderboard" id="ad-mailbox-top">
+  <span>Advertisement</span>
+</div>
+
+<div class="card">
+  <div class="inbox-header">
+    <h2>Messages <span id="msg-total" style="color:var(--text-muted);font-weight:400">(0)</span></h2>
+    <span class="status" id="inbox-status">Checking…</span>
+  </div>
+
+  <div class="empty-state" id="empty-state">
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+    <p>No messages yet.</p>
+    <p style="font-size:0.9rem">Send an email to <strong>{{ email }}</strong> and it will appear here automatically.</p>
+  </div>
+
+  <ul class="message-list" id="message-list" role="list"></ul>
+</div>
+
+<!-- Message modal -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modal-title">Message</h3>
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-meta" id="modal-meta"></div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-top:1rem">
+  Inbox refreshes every few seconds. Messages are temporary and may be removed after a short period.
+</p>
+{% endblock %}

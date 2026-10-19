@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block page %}faq{% endblock %}
+{% block title %}FAQ – Temporary Email Questions Answered | GGNoob Mail{% endblock %}
+{% block description %}Clear answers about how free temporary email works on {{ domain }}: how long messages last, privacy, safety, and common use cases.{% endblock %}
+{% block canonical %}/faq{% endblock %}
+
+{% block content %}
+<div class="page-content">
+  <h1>Frequently Asked Questions</h1>
+  <p style="color:var(--text-muted);margin-bottom:1.5rem">
+    Straightforward answers about using disposable email on {{ domain }}. 
+    If something isn’t covered here, feel free to <a href="/contact">reach out</a>.
+  </p>
+
+  <details class="faq-item" open>
+    <summary>What is temp mail / disposable email?</summary>
+    <p>
+      Temporary email is a short-lived address you use instead of your real one. 
+      You create an address (for example <strong>demo@{{ domain }}</strong>), receive messages in a web inbox, 
+      and discard it when you’re finished. It’s ideal for sign-ups, one-time codes, and testing without risking your personal inbox.
+    </p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Do I need to create an account?</summary>
+    <p>
+      No. GGNoob Temp Mail works without registration. Choose a name or accept a random one, 
+      copy the address, and open the inbox. There is no password and no profile stored under your identity.
+    </p>
+  </details>
+
+  <details class="faq-item">
+    <summary>How long do emails stay in the inbox?</summary>
+    <p>
+      Messages are temporary. Retention depends on the underlying mail infrastructure (typically up to several days). 
+      Treat the inbox as short-term storage: read what you need, then assume the content may disappear. 
+      Do not use this service for important long-term correspondence.
+    </p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Is it really free?</summary>
+    <p>
+      Yes. Creating addresses and reading messages is free. The site may display advertisements 
+      (via Google AdSense or similar) to cover hosting costs. There are no hidden “premium” requirements for basic use.
+    </p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Can I choose my own address?</summary>
+    <p>
+      Yes. On the home page enter any allowed name (letters, numbers, dots, underscores, plus, hyphen) 
+      and you’ll get <strong>name@{{ domain }}</strong>. If the name is already in use by someone else at that moment, 
+      you’ll still see the same public mailbox — so pick something unique if you want privacy for that session.
+    </p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Is my data private?</summary>
+    <p>
+      We do not require personal information to use the service. Mailboxes are accessible to anyone who knows the address, 
+      so never use a temporary address for anything sensitive (banking, medical, passwords you care about long-term). 
+      See our <a href="/privacy">Privacy Policy</a> for how we handle technical data such as logs.
+    </p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Why didn’t I receive an email?</summary>
+    <p>
+      A few common reasons: the sender blocked disposable domains, the message is still in transit, 
+      or the address was mistyped. Wait a minute and hit Refresh. Also check that you copied the full address including @{{ domain }}.
+    </p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Can I send emails from this address?</summary>
+    <p>
+      No. This is a receive-only temporary inbox. You cannot send or reply from @{{ domain }} addresses. 
+      Use it only for incoming verification messages, newsletters you don’t want long-term, or testing.
+    </p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Is this service allowed for AdSense / monetization?</summary>
+    <p>
+      The website itself is a legitimate utility service with clear terms, privacy policy, and original content. 
+      We aim to comply with advertising network policies (no prohibited content, clear navigation, real value for users). 
+      Final approval always rests with the ad network.
+    </p>
+  </details>
+
+  <details class="faq-item">
+    <summary>How do I report abuse?</summary>
+    <p>
+      If you believe an address on this domain is being used for harmful activity, please contact us via the 
+      <a href="/contact">Contact</a> page with details. We take reports seriously within the limits of a public temporary-mail system.
+    </p>
+  </details>
+</div>
+
+<!-- Ad slot -->
+<div class="ad-slot rectangle" style="max-width:720px;margin:2rem auto">
+  <span>Advertisement</span>
+</div>
+{% endblock %}

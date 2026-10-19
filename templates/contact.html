@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block page %}contact{% endblock %}
+{% block title %}Contact | GGNoob Temp Mail{% endblock %}
+{% block description %}Contact the GGNoob Temp Mail team for questions, feedback, or abuse reports about {{ domain }}.{% endblock %}
+{% block canonical %}/contact{% endblock %}
+
+{% block content %}
+<div class="page-content">
+  <h1>Contact</h1>
+  <p>
+    We welcome feedback, questions about the service, and reports of abuse related to addresses on {{ domain }}.
+  </p>
+
+  <h2>How to reach us</h2>
+  <p>
+    For the time being, please use a temporary address of your choice on this site (or your own email) 
+    and send a message to the operator via the domain’s administrative contact if published in WHOIS, 
+    or open an issue if a public repository is linked later.
+  </p>
+  <p>
+    <strong>Abuse reports:</strong> Include the full temporary address involved, approximate time of the activity, 
+    and a short description. We will review reports within our technical ability on a public disposable-mail system.
+  </p>
+  <p>
+    <strong>Business / AdSense / partnerships:</strong> Use the same channel and mark the subject clearly.
+  </p>
+
+  <h2>Before you write</h2>
+  <ul>
+    <li>Many common questions are already answered on the <a href="/faq">FAQ</a> page.</li>
+    <li>Message delivery depends on the sending service and our upstream mail provider; we cannot force a third party to accept disposable domains.</li>
+    <li>We cannot recover deleted temporary messages or guarantee long-term storage.</li>
+  </ul>
+
+  <p style="margin-top:1.5rem">
+    Thank you for using GGNoob Temp Mail.
+  </p>
+</div>
+{% endblock %}

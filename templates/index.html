@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block page %}home{% endblock %}
+{% block title %}Free Temp Mail – Instant Disposable Email @{{ domain }}{% endblock %}
+{% block description %}Get a free temporary email address on {{ domain }} in one click. No registration, no password. Read verification codes and messages instantly while keeping your real inbox private.{% endblock %}
+{% block canonical %}/{% endblock %}
+{% block og_url %}/{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h1>Free Temporary Email Address</h1>
+  <p>Create a disposable inbox on <strong>@{{ domain }}</strong> in seconds. No signup, no tracking, just a clean temporary address you can use and forget.</p>
+</section>
+
+<!-- Ad slot: top leaderboard (AdSense) -->
+<div class="ad-slot leaderboard" id="ad-top">
+  <!-- 
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="horizontal"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  -->
+  <span>Advertisement</span>
+</div>
+
+<div class="card">
+  <p style="text-align:center;color:var(--text-muted);font-size:0.9rem;margin-bottom:0.5rem">Your temporary address</p>
+  <div class="email-box">
+    <div class="email-display" id="email-address" data-email="{{ email }}">{{ email }}</div>
+    <button type="button" class="btn btn-primary" id="btn-copy" aria-label="Copy email address">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy
+    </button>
+    <button type="button" class="btn btn-secondary" id="btn-random">New address</button>
+  </div>
+
+  <form class="custom-form" id="custom-form" action="/" method="get">
+    <label for="custom-name" class="sr-only">Custom name</label>
+    <input type="text" id="custom-name" name="name" placeholder="choose a name" maxlength="64" autocomplete="off" spellcheck="false">
+    <span class="domain-suffix">@{{ domain }}</span>
+    <button type="submit" class="btn btn-secondary">Use this</button>
+  </form>
+
+  <p style="text-align:center;margin-top:1.25rem">
+    <a href="{{ url_for('mailbox', name=name) }}" class="btn btn-primary">Open inbox →</a>
+  </p>
+</div>
+
+<div class="features">
+  <div class="feature">
+    <h3>No registration</h3>
+    <p>Pick any name or get a random one. Your address is ready immediately.</p>
+  </div>
+  <div class="feature">
+    <h3>Private by design</h3>
+    <p>We don’t ask for personal data. Use the address, read the mail, and move on.</p>
+  </div>
+  <div class="feature">
+    <h3>Live inbox</h3>
+    <p>Messages appear automatically. Perfect for one-time codes and confirmations.</p>
+  </div>
+  <div class="feature">
+    <h3>Free forever</h3>
+    <p>No paid plans required for basic temporary email. Just open and use.</p>
+  </div>
+</div>
+
+<!-- Ad slot: mid-page rectangle -->
+<div class="ad-slot rectangle" id="ad-mid">
+  <!-- 
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="rectangle"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  -->
+  <span>Advertisement</span>
+</div>
+
+<section class="page-content" style="margin-top:2rem">
+  <h2>What is a temporary email?</h2>
+  <p>
+    A temporary email (also called temp mail, disposable email, or burner address) is a short-lived inbox you can use instead of your real one. 
+    You generate an address like <strong>you@{{ domain }}</strong>, paste it into a signup form, receive the verification message here, 
+    and never expose your personal email to that website’s mailing list or potential data leaks.
+  </p>
+  <p>
+    People use temporary addresses for newsletter trials, free downloads, testing apps, and any situation where you need an email 
+    but don’t want long-term contact. Our service on {{ domain }} is designed to be fast, simple, and free of unnecessary friction.
+  </p>
+
+  <h2>How to use GGNoob Temp Mail</h2>
+  <ul>
+    <li>Copy the address shown above (or create a custom name).</li>
+    <li>Paste it wherever a website asks for an email.</li>
+    <li>Open your inbox on this site — messages refresh automatically.</li>
+    <li>Read the message, click any links you need, then close the tab when you’re done.</li>
+  </ul>
+  <p>
+    That’s it. No account, no password to remember, and nothing stored under your name. 
+    For more details see our <a href="/faq">FAQ</a> and <a href="/privacy">Privacy Policy</a>.
+  </p>
+</section>
+{% endblock %}

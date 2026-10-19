@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block page %}terms{% endblock %}
+{% block title %}Terms of Service | GGNoob Temp Mail{% endblock %}
+{% block description %}Terms of Service for the free temporary email service at {{ domain }}.{% endblock %}
+{% block canonical %}/terms{% endblock %}
+
+{% block content %}
+<div class="page-content">
+  <h1>Terms of Service</h1>
+  <p style="color:var(--text-muted);font-size:0.9rem">Last updated: October 2026</p>
+
+  <p>
+    Welcome to GGNoob Temp Mail (“the Service”), operated at {{ domain }}. 
+    By accessing or using this website and its temporary email features, you agree to these Terms of Service. 
+    If you do not agree, please do not use the Service.
+  </p>
+
+  <h2>1. Description of the Service</h2>
+  <p>
+    GGNoob Temp Mail provides free, disposable email addresses on the domain {{ domain }}. 
+    Users can generate or choose an address, receive incoming messages in a web-based inbox, and view their content. 
+    The Service is intended for short-term, non-critical use such as website registrations, testing, and avoiding spam.
+  </p>
+
+  <h2>2. No registration / public mailboxes</h2>
+  <p>
+    Addresses are not password-protected. Anyone who knows an address can view its inbox. 
+    Do not use a temporary address for confidential, financial, medical, or otherwise sensitive communications. 
+    You are solely responsible for the content you choose to receive and for any consequences of sharing an address.
+  </p>
+
+  <h2>3. Acceptable use</h2>
+  <p>You agree not to use the Service to:</p>
+  <ul>
+    <li>Engage in illegal activities, fraud, harassment, or distribution of malware</li>
+    <li>Send or request spam, phishing, or unsolicited bulk messages</li>
+    <li>Violate the rights of others, including intellectual property and privacy rights</li>
+    <li>Attempt to disrupt, overload, or reverse-engineer the Service or its infrastructure</li>
+    <li>Impersonate others or misrepresent affiliation with any person or entity</li>
+  </ul>
+  <p>
+    We reserve the right to block access, delete messages, or take other action when we become aware of abuse, 
+    to the extent technically feasible on a public temporary-mail system.
+  </p>
+
+  <h2>4. Availability and data retention</h2>
+  <p>
+    The Service is provided “as is” and “as available.” We do not guarantee uninterrupted access, 
+    delivery of every message, or permanent storage. Messages are temporary and may be deleted 
+    automatically after a limited period. Do not rely on this Service as a permanent archive.
+  </p>
+
+  <h2>5. Intellectual property</h2>
+  <p>
+    The website design, text, and branding belong to the operator of {{ domain }} or its licensors. 
+    You may not copy, modify, or redistribute substantial parts of the site without permission, 
+    except for normal personal use of the temporary email feature.
+  </p>
+
+  <h2>6. Disclaimers</h2>
+  <p>
+    TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICE IS PROVIDED WITHOUT WARRANTIES OF ANY KIND, 
+    EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. 
+    We are not responsible for messages sent by third parties, for failed deliveries, or for any loss 
+    arising from your use of a temporary address.
+  </p>
+
+  <h2>7. Limitation of liability</h2>
+  <p>
+    To the fullest extent permitted by applicable law, the operators of {{ domain }} shall not be liable 
+    for any indirect, incidental, special, consequential, or punitive damages, or any loss of data, profits, 
+    or business opportunities, arising out of or related to your use of the Service.
+  </p>
+
+  <h2>8. Changes</h2>
+  <p>
+    We may update these Terms from time to time. The “Last updated” date at the top will change accordingly. 
+    Continued use of the Service after changes constitutes acceptance of the revised Terms.
+  </p>
+
+  <h2>9. Contact</h2>
+  <p>
+    Questions about these Terms can be sent via the <a href="/contact">Contact</a> page.
+  </p>
+</div>
+{% endblock %}

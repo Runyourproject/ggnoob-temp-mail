@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block page %}privacy{% endblock %}
+{% block title %}Privacy Policy | GGNoob Temp Mail{% endblock %}
+{% block description %}Privacy Policy for the free temporary email service at {{ domain }}. How we handle data and what we collect.{% endblock %}
+{% block canonical %}/privacy{% endblock %}
+
+{% block content %}
+<div class="page-content">
+  <h1>Privacy Policy</h1>
+  <p style="color:var(--text-muted);font-size:0.9rem">Last updated: October 2026</p>
+
+  <p>
+    This Privacy Policy explains how GGNoob Temp Mail (“we”, “the Service”) at {{ domain }} 
+    handles information when you use our free temporary email website.
+  </p>
+
+  <h2>1. What we do not collect</h2>
+  <p>
+    We do not require you to create an account, provide a real name, phone number, or permanent email address 
+    to use the temporary inbox feature. We do not sell personal data.
+  </p>
+
+  <h2>2. Information that may be processed</h2>
+  <ul>
+    <li><strong>Email content:</strong> Messages sent to addresses on {{ domain }} are processed so they can be displayed in the web inbox. 
+        Mailboxes are not private; anyone who knows the address can read the messages.</li>
+    <li><strong>Technical logs:</strong> Like most websites, our servers may log IP addresses, browser type, request times, and similar technical data 
+        for security, rate-limiting, and troubleshooting. These logs are retained only as long as needed for those purposes.</li>
+    <li><strong>Cookies / local storage:</strong> We may use essential cookies or local storage for basic site function. 
+        We do not use them to build advertising profiles of individuals beyond what third-party ad networks may do.</li>
+  </ul>
+
+  <h2>3. Third-party services</h2>
+  <p>
+    The Service relies on external infrastructure to receive and store temporary messages (mail API provider). 
+    When you view an inbox, requests are made to that provider on your behalf.
+  </p>
+  <p>
+    If we display advertising (for example Google AdSense), the ad network may use cookies or similar technologies 
+    to show relevant ads and measure performance. You can review Google’s policies and opt-out options at 
+    <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer" target="_blank">policies.google.com/technologies/ads</a>.
+  </p>
+  <p>
+    We may also use privacy-friendly analytics (or none at all). Any analytics provider will be limited to aggregated, non-identifying metrics where possible.
+  </p>
+
+  <h2>4. Data retention</h2>
+  <p>
+    Temporary emails and their contents are short-lived by design and may be deleted automatically after a limited period 
+    (often measured in days). Server logs are rotated and not kept indefinitely. 
+    We do not offer permanent storage or account history.
+  </p>
+
+  <h2>5. Children’s privacy</h2>
+  <p>
+    The Service is not directed at children under 13 (or the equivalent minimum age in your jurisdiction). 
+    We do not knowingly collect personal information from children.
+  </p>
+
+  <h2>6. Security</h2>
+  <p>
+    We take reasonable technical measures to protect the website. However, because temporary addresses are public 
+    (no login required), you should never send sensitive personal data to a disposable inbox. 
+    Use this tool only for low-risk, short-term needs.
+  </p>
+
+  <h2>7. Your choices</h2>
+  <p>
+    You can stop using the Service at any time. Because there is no account, there is no profile to delete. 
+    Simply close the browser. If you believe messages related to you were sent to an address on this domain 
+    and you want them removed, contact us with sufficient detail so we can investigate within technical limits.
+  </p>
+
+  <h2>8. International users</h2>
+  <p>
+    The Service may be hosted or processed in different regions. By using it, you understand that information 
+    may be transferred to and processed where our servers or providers operate.
+  </p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>
+    We may update this Privacy Policy occasionally. The “Last updated” date will reflect the latest version. 
+    Continued use of the Service after changes means you accept the updated policy.
+  </p>
+
+  <h2>10. Contact</h2>
+  <p>
+    For privacy-related questions, use the <a href="/contact">Contact</a> page.
+  </p>
+</div>
+{% endblock %}
